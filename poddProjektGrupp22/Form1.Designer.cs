@@ -40,67 +40,80 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(17, 15);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(162, 15);
+            label1.Size = new Size(245, 25);
             label1.TabIndex = 2;
             label1.Text = "Ange källans url (RSS-adress):";
             // 
             // textBoxURL
             // 
-            textBoxURL.Location = new Point(12, 27);
+            textBoxURL.Location = new Point(17, 45);
+            textBoxURL.Margin = new Padding(4, 5, 4, 5);
             textBoxURL.Name = "textBoxURL";
-            textBoxURL.Size = new Size(261, 23);
+            textBoxURL.Size = new Size(371, 31);
             textBoxURL.TabIndex = 3;
+            textBoxURL.TextChanged += textBoxURL_TextChanged;
             // 
             // buttonNyhetskalla
             // 
-            buttonNyhetskalla.Location = new Point(12, 56);
+            buttonNyhetskalla.Location = new Point(17, 93);
+            buttonNyhetskalla.Margin = new Padding(4, 5, 4, 5);
             buttonNyhetskalla.Name = "buttonNyhetskalla";
-            buttonNyhetskalla.Size = new Size(162, 23);
+            buttonNyhetskalla.Size = new Size(231, 38);
             buttonNyhetskalla.TabIndex = 4;
             buttonNyhetskalla.Text = "Hämta och visa nyhetskälla";
             buttonNyhetskalla.UseVisualStyleBackColor = true;
+            buttonNyhetskalla.Click += buttonNyhetskalla_Click;
             // 
             // listBoxInformation
             // 
             listBoxInformation.FormattingEnabled = true;
-            listBoxInformation.Location = new Point(12, 104);
+            listBoxInformation.Location = new Point(17, 173);
+            listBoxInformation.Margin = new Padding(4, 5, 4, 5);
             listBoxInformation.Name = "listBoxInformation";
-            listBoxInformation.Size = new Size(303, 289);
+            listBoxInformation.Size = new Size(431, 479);
             listBoxInformation.TabIndex = 5;
+            listBoxInformation.SelectedIndexChanged += listBoxInformation_SelectedIndexChanged;
             // 
             // listBoxLankar
             // 
             listBoxLankar.FormattingEnabled = true;
-            listBoxLankar.Location = new Point(349, 104);
+            listBoxLankar.Location = new Point(499, 173);
+            listBoxLankar.Margin = new Padding(4, 5, 4, 5);
             listBoxLankar.Name = "listBoxLankar";
-            listBoxLankar.Size = new Size(313, 289);
+            listBoxLankar.Size = new Size(445, 479);
             listBoxLankar.TabIndex = 6;
+            listBoxLankar.SelectedIndexChanged += listBoxLankar_SelectedIndexChanged;
             // 
             // buttonSpara
             // 
-            buttonSpara.Location = new Point(12, 406);
+            buttonSpara.Location = new Point(17, 677);
+            buttonSpara.Margin = new Padding(4, 5, 4, 5);
             buttonSpara.Name = "buttonSpara";
-            buttonSpara.Size = new Size(162, 23);
+            buttonSpara.Size = new Size(231, 38);
             buttonSpara.TabIndex = 7;
             buttonSpara.Text = "Spara i nyhetsflödet";
             buttonSpara.UseVisualStyleBackColor = true;
+            buttonSpara.Click += buttonSpara_Click;
             // 
             // buttonVisning
             // 
-            buttonVisning.Location = new Point(224, 406);
+            buttonVisning.Location = new Point(320, 677);
+            buttonVisning.Margin = new Padding(4, 5, 4, 5);
             buttonVisning.Name = "buttonVisning";
-            buttonVisning.Size = new Size(151, 23);
+            buttonVisning.Size = new Size(216, 38);
             buttonVisning.TabIndex = 8;
             buttonVisning.Text = "Ange visningsnamn";
             buttonVisning.UseVisualStyleBackColor = true;
+            buttonVisning.Click += buttonVisning_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(711, 441);
+            ClientSize = new Size(1016, 735);
             Controls.Add(buttonVisning);
             Controls.Add(buttonSpara);
             Controls.Add(listBoxLankar);
@@ -108,7 +121,6 @@
             Controls.Add(buttonNyhetskalla);
             Controls.Add(textBoxURL);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
